@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="stylesKanban.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tareas</a></li>
+            <li><a href="#" id="btnCollaborators">Colaboradores</a></li>
+        </ul>
+    </nav>
+    <div class="collaborators" id="collaboratorsList" style="display: none;">
+        <h2>Colaboradores del Proyecto</h2>
+        <ul>
+            <li><a href="mailto:colaborador1@correo.com">colaborador1@correo.com</a></li>
+            <li><a href="mailto:colaborador2@correo.com">colaborador2@correo.com</a></li>
+            <li><a href="mailto:colaborador3@correo.com">colaborador3@correo.com</a></li>
+            <!-- Agrega más elementos según los colaboradores -->
+        </ul>
+    </div>
+</header>
+
+<div class="kanban-sidebar">
+  <ul>
+      <li><a href="#opción1">Antecedentes</a></li>
+      <li><a href="#opción2">Objetivo</a></li>
+      <li><a href="#opción3">Presupuesto</a></li>
+      <!-- Agrega más opciones según sea necesario -->
+  </ul>
+</div>
+
+<div class="kanban-board">
+  <div class="column" id="pendiente">
+      <div class="column-header">Pendiente</div>
+      <div class="task" draggable="true">Tarea 1</div>
+      <div class="task" draggable="true">Tarea 2</div>
+  </div>
+  <div class="column" id="en-progreso">
+      <div class="column-header">En Progreso</div>
+  </div>
+  <div class="column" id="completado">
+      <div class="column-header">Completado</div>
+  </div>
+</div>
+
+
+<footer>
+  <p>&copy; 2023 Alimentos Al Consumidor. Todos los derechos reservados.</p>
+</footer>
+
+  <script src="scriptKanban.js"></script>
+</body>
+</html>
