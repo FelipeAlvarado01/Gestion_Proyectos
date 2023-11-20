@@ -1,0 +1,90 @@
+/*Globales*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+$Color_1: #2F3D59;
+$Color_2: #BFBAB0;
+$Color_3: #D9D6D0;
+$Color_4: #BF843B;
+$Color_5: #594A3E;
+$typographyPoppins: 'Poppins', 'Arial Narrow Bold', sans-serif;
+$typographyInter: 'Inter', 'Arial Narrow Bold', sans-serif;
+$typographyRoboto: 'Roboto', 'Arial Narrow Bold', sans-serif;
+$typographyPlayfairDisplay: 'Playfair+Display', 'Arial Narrow Bold', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: $Color_3;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Ajusta el espacio entre los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  
+  h1 {
+    padding: 20px 20px 20px 75px;
+    font-family: $typographyInter;
+    font-size: 2em;
+    color: $Color_1;
+  }
+
+  .profile {
+    padding: 20px 70px;
+  }
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  .menu{
+    height: 100%;
+    width: 80px;
+    background-color: $Color_1;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+
+    .itemMenu_1{
+      ul {
+        i{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 50px 20px;
+        }
+      }
+    }
+    .itemMenu_2{
+      ul {
+        i{
+          display: flex;
+          align-items: center;
+          padding: 550px 20px 50px;
+        }
+      }
+    }
+
+  }
+}
+
+/*footer{
+  background-color: $Color_1;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+
+  p{
+    font-family: ;
+    align-items: center;
+  }
+}*/

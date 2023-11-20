@@ -1,43 +1,67 @@
-/* styles.css */
-body {
-  font-family: Arial, sans-serif;
+/*Globales*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #D9D6D0;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Ajusta el espacio entre los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+header h1 {
+  padding: 20px 20px 20px 75px;
+  font-family: "Inter", "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+  color: #2F3D59;
+}
+header .profile {
+  padding: 20px 70px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4;
 }
-
-.login-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+main .menu {
+  height: 100%;
+  width: 80px;
+  background-color: #2F3D59;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
 }
-
-h2 {
-  text-align: center;
-}
-
-form {
+main .menu .itemMenu_1 ul i {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+}
+main .menu .itemMenu_2 ul i {
+  display: flex;
+  align-items: center;
+  padding: 550px 20px 50px;
 }
 
-label {
-  margin-bottom: 8px;
-}
+/*footer{
+  background-color: $Color_1;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
 
-input, button {
-  padding: 8px;
-  margin-bottom: 15px;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+  p{
+    font-family: ;
+    align-items: center;
+  }
+}*//*# sourceMappingURL=styles.css.map */
