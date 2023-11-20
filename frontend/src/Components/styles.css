@@ -29,7 +29,7 @@ header .profile {
 
 main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 7.5% 92.5%;
   align-items: center;
 }
 main .menu {
@@ -50,6 +50,11 @@ main .menu .itemMenu_2 ul i {
   display: flex;
   align-items: center;
   padding: 550px 20px 50px;
+}
+main .task {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /*footer{

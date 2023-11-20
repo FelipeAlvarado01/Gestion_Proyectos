@@ -42,7 +42,7 @@ header {
 
 main{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 7.5% 92.5%;
   align-items: center;
   .menu{
     height: 100%;
@@ -72,6 +72,12 @@ main{
       }
     }
 
+  }
+
+  .task{
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
