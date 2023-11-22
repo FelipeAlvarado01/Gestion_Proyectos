@@ -10,6 +10,13 @@ $Color_2: #BFBAB0;
 $Color_3: #D9D6D0;
 $Color_4: #BF843B;
 $Color_5: #594A3E;
+$darkColor: #000000;
+$whiteColor: #ffffff;
+$grayColor: #48494b;
+$blackMenu: #282929;
+$greeColor: #1faca2;
+$yellowColor: #ebd96b;
+$redColor: #db4444;
 $typographyPoppins: 'Poppins', 'Arial Narrow Bold', sans-serif;
 $typographyInter: 'Inter', 'Arial Narrow Bold', sans-serif;
 $typographyRoboto: 'Roboto', 'Arial Narrow Bold', sans-serif;
@@ -28,69 +35,81 @@ header {
   justify-content: space-between; /* Ajusta el espacio entre los elementos */
   align-items: center; /* Centra verticalmente los elementos */
   
-  h1 {
-    padding: 20px 20px 20px 75px;
-    font-family: $typographyInter;
-    font-size: 2em;
+  .main-title{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px 20px 20px 75px;
+    padding: 20px 20px 20px 20px;
+    font-family: $typographyPoppins;
+    font-size: 1em;
     color: $Color_1;
+  }
+  
+  .link-section{
+    font-size: 1.1em;
+    
+    font-family: $typographyPoppins;
+    nav{
+      a{
+        padding: 0 50px;
+        text-decoration: none;
+        color: $Color_1;
+      }
+    }
   }
 
   .profile {
+    a{
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      background-color: $Color_2;
+      padding: 20px;
+      border-radius: 25%;
+    }
     padding: 20px 70px;
   }
 }
 
 main{
-  display: grid;
-  grid-template-columns: 7.5% 92.5%;
-  align-items: center;
-  .menu{
-    height: 100%;
-    width: 80px;
-    background-color: $Color_1;
-    display: grid;
-    grid-template-rows: repeat(1, 1fr);
-
-    .itemMenu_1{
-      ul {
-        i{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          padding: 50px 20px;
-        }
-      }
-    }
-    .itemMenu_2{
-      ul {
-        i{
-          display: flex;
-          align-items: center;
-          padding: 550px 20px 50px;
-        }
-      }
-    }
-
+  h2{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 20px 20px 20px 20px;
+    font-family: $typographyPoppins;
+    font-size: 1.5em;
+    color: $grayColor;
   }
-
-  .task{
-    padding: 2%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+  margin: 20px 20px 20px 75px;
 }
 
-/*footer{
-  background-color: $Color_1;
-  overflow: hidden;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
+/* Estilos CSS */
+/* ... (código previo) */
 
-  p{
-    font-family: ;
-    align-items: center;
+.progress-bar {
+  background-color: #3498db;
+  height: 20px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  transition: width 0.5s ease-in-out; /* Transición suave de la anchura */
+}
+
+/* Estilos para la animación */
+.progress-animation {
+  animation: fillProgress 2s forwards; /* Animación para llenar la barra */
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0; /* La animación comienza con una anchura de 0 */
   }
-}*/
+  to {
+    /* La animación termina con la anchura deseada */
+    /* En este caso, se usa el valor que se establece en el JavaScript */
+  }
+}

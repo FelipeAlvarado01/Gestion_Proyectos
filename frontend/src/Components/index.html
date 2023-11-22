@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,58 +9,48 @@
   <script src="https://kit.fontawesome.com/b2a572fab6.js" crossorigin="anonymous"></script>
   <title>ACOProyectos</title>
 </head>
+
 <body>
+
   <header>
-    <h1>ACOProyectos</h1>
+    <a href="../Components/index.html" class="main-title">
+      <h1>ACOProyectos</h1>
+    </a>
+
+    <div class="link-section">
+      <nav>
+        <a href="index.html">Home</a></li>
+        <a href="./storeIndex.html">Mis Proyectos</a></li>
+      </nav>
+    </div>
+
     <div class="profile">
-      <i class="fa-solid fa-user fa-2xl" style="color: #2F3D59;"></i>
+      <a href="#">
+        <i class="fas fa-user fa-2x" style="color: #2F3D59;"></i>
+      </a>
     </div>
   </header>
 
-  <!------------------------------------------->
-
   <main>
-    <section class="menu">.
-      <div class="itemMenu_1">
-        <ul>
-          <i class="fa-solid fa-house fa-2xl" style="color: #D9D6D0;"></i>
-          <i class="fa-solid fa-folder-open fa-2xl" style="color: #D9D6D0;"></i>
-          <i class="fa-solid fa-file fa-2xl" style="color: #D9D6D0;"></i>
-        </ul>
+    <div class="container">
+      <h2>Tareas</h2>
+      <div class="task-list" id="taskList">
+        <!-- Aquí se agregarán las tarjetas de tarea -->
+      </div>
+      <div class="task-form" id="taskForm">
+        <h2>Agregar Tarea</h2>
+        <input type="text" id="title" placeholder="Título de la tarea">
+        <input type="text" id="collaborators" placeholder="Colaboradores">
+        <input type="number" id="progress" placeholder="Progreso (%)" min="0" max="100">
+        <button onclick="addTask()">Agregar Tarea</button>
       </div>
 
-      <div class="itemMenu_2">
-        <ul>
-          <i class="fa-solid fa-bars fa-2xl" style="color: #BFBAB0;"></i>
-        </ul>
-      </div>
-    </section>
+      <button id="showFormBtn" onclick="toggleForm()">Agregar Tarea</button>
 
-    <section class="task">
-
-      <article>
-        <h3>Titulo de la tarea</h3>
-        <div class="members">
-
-        </div>
-        <div class="process">
-
-        </div>
-
-      </article>
-
-      <article>
-        <h3>Titulo de la tarea</h3>
-        
-      </article>
-    </section>
+    </div>
   </main>
 
-  <!------------------------------------------->
-
-  <!---<footer>
-    <p>&copy; 2023 ACO</p>
-    <p> Todos los derechos reservados.</p>
-  </footer>-->
+  <script src="../Components/js/script.js"></script>
 </body>
+
 </html>

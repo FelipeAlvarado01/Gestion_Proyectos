@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Globales*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
@@ -17,56 +18,74 @@ header {
   justify-content: space-between; /* Ajusta el espacio entre los elementos */
   align-items: center; /* Centra verticalmente los elementos */
 }
-header h1 {
-  padding: 20px 20px 20px 75px;
-  font-family: "Inter", "Arial Narrow Bold", sans-serif;
-  font-size: 2em;
+header .main-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 20px 20px 20px 75px;
+  padding: 20px 20px 20px 20px;
+  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
+  font-size: 1em;
+  color: #2F3D59;
+}
+header .link-section {
+  font-size: 1.1em;
+  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
+}
+header .link-section nav a {
+  padding: 0 50px;
+  text-decoration: none;
   color: #2F3D59;
 }
 header .profile {
   padding: 20px 70px;
 }
+header .profile a {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background-color: #BFBAB0;
+  padding: 20px;
+  border-radius: 25%;
+}
 
 main {
-  display: grid;
-  grid-template-columns: 7.5% 92.5%;
-  align-items: center;
+  margin: 20px 20px 20px 75px;
 }
-main .menu {
-  height: 100%;
-  width: 80px;
-  background-color: #2F3D59;
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-}
-main .menu .itemMenu_1 ul i {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 20px;
-}
-main .menu .itemMenu_2 ul i {
+main h2 {
   display: flex;
   align-items: center;
-  padding: 550px 20px 50px;
-}
-main .task {
-  padding: 2%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  cursor: pointer;
+  text-decoration: none;
+  padding: 20px 20px 20px 20px;
+  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
+  font-size: 1.5em;
+  color: #48494b;
 }
 
-/*footer{
-  background-color: $Color_1;
-  overflow: hidden;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
+/* Estilos CSS */
+/* ... (código previo) */
+.progress-bar {
+  background-color: #3498db;
+  height: 20px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  transition: width 0.5s ease-in-out; /* Transición suave de la anchura */
+}
 
-  p{
-    font-family: ;
-    align-items: center;
+/* Estilos para la animación */
+.progress-animation {
+  animation: fillProgress 2s forwards; /* Animación para llenar la barra */
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0; /* La animación comienza con una anchura de 0 */
   }
-}*//*# sourceMappingURL=styles.css.map */
+  to {
+    /* La animación termina con la anchura deseada */
+    /* En este caso, se usa el valor que se establece en el JavaScript */
+  }
+}/*# sourceMappingURL=styles.css.map */
