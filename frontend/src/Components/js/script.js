@@ -4,6 +4,30 @@ function toggleForm() {
   taskForm.style.display = (taskForm.style.display === 'none' || taskForm.style.display === '') ? 'block' : 'none';
 }
 
+function createTask(){
+  const alert = document.getElementById('task-form');
+  alert.innerHTML += 
+  `
+    <div class="modal_container">
+      <div class="modal__conten">
+        <button onclick="close()">x</button>
+          <form id="addTaskForm">
+            <h2>Agregar Tarea</h2>
+            <input type="text" id="title" placeholder="Título de la tarea">
+            <input type="text" id="collaborators" placeholder="Colaboradores">
+            <input type="number" id="progress" placeholder="Progreso (%)" min="0" max="100">
+            <button onclick="addTask()">Agregar Tarea</button>
+          </form>
+      </div>  
+    </div>
+  `
+}
+
+function close(){
+  console.log("hola");
+  window.location.href = "../index.html";
+}
+
 // Función para agregar una nueva tarea
 function addTask() {
   const title = document.getElementById('title').value;
@@ -45,3 +69,4 @@ function addTask() {
     alert('Por favor, completa todos los campos.');
   }
 }
+document.getElementsByClassName('createTask')[0].addEventListener('click', createTask);

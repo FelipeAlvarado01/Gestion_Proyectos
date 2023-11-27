@@ -61,30 +61,81 @@ header {
   }
 
   .profile {
+    margin: 20px 90px;
+    padding: 10px 15px;
+    background-color: $Color_2;
+    border-radius: 10px;
     a{
       cursor: pointer;
       border: none;
       text-decoration: none;
-      background-color: $Color_2;
-      padding: 20px;
-      border-radius: 25%;
     }
-    padding: 20px 70px;
   }
 }
 
 main{
-  h2{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 20px 20px 20px 20px;
-    font-family: $typographyPoppins;
-    font-size: 1.5em;
-    color: $grayColor;
+  margin: 20px 90px;
+
+  .container{
+    h2{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: $typographyPoppins;
+      font-size: 1.5em;
+      color: $grayColor;
+    }  
   }
-  margin: 20px 20px 20px 75px;
+
+  button{
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: $Color_1;
+  }
+
+}
+
+.task-form{
+  .modal_container {
+    background-color:transparent;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .modal__conten {
+    width: 350px;
+    max-width: 500px;
+    height: 250px;
+    padding: 5px 15px 25px 15px;
+    position: absolute;
+    border-radius: 10px;
+    color: #fafbfd;
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+    background-color: $Color_1;
+    display: block;
+    letter-spacing: 1px;
+    z-index: 2;
+  }
+  .modal__closed {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    font-size: 25px;
+    cursor: pointer;
+  }  
 }
 
 /* Estilos CSS */
