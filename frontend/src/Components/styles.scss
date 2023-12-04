@@ -28,139 +28,18 @@ $typographyPlayfairDisplay: 'Playfair+Display', 'Arial Narrow Bold', sans-serif;
   box-sizing: border-box;
 }
 
-header {
-  background-color: $Color_3;
-  width: 100%;
+.slider {
+  //border: 1px solid #ccc;
   display: flex;
-  justify-content: space-between; /* Ajusta el espacio entre los elementos */
-  align-items: center; /* Centra verticalmente los elementos */
-  
-  .main-title{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 20px 20px 20px 75px;
-    padding: 20px 20px 20px 20px;
-    font-family: $typographyPoppins;
-    font-size: 1em;
-    color: $Color_1;
-  }
-  
-  .link-section{
-    font-size: 1.1em;
-    
-    font-family: $typographyPoppins;
-    nav{
-      a{
-        padding: 0 50px;
-        text-decoration: none;
-        color: $Color_1;
-      }
-    }
-  }
-
-  .profile {
-    margin: 20px 90px;
-    padding: 10px 15px;
-    background-color: $Color_2;
-    border-radius: 10px;
-    a{
-      cursor: pointer;
-      border: none;
-      text-decoration: none;
-    }
-  }
+  justify-content: center; /* Ajusta el espacio entre los elementos */
+  align-content: center;
+  transition: opacity 0.5s ease; /* Transición de opacidad para el slider */
 }
 
-main{
-  margin: 20px 90px;
-
-  .container{
-    h2{
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      text-decoration: none;
-      font-family: $typographyPoppins;
-      font-size: 1.5em;
-      color: $grayColor;
-    }  
-  }
-
-  button{
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: $Color_1;
-  }
-
+.content {
+  padding: 20px;
 }
 
-.task-form{
-  .modal_container {
-    background-color:transparent;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  .modal__conten {
-    width: 350px;
-    max-width: 500px;
-    height: 250px;
-    padding: 5px 15px 25px 15px;
-    position: absolute;
-    border-radius: 10px;
-    color: #fafbfd;
-    font-family: 'Merriweather', serif;
-    box-sizing: border-box;
-    background-color: $Color_1;
-    display: block;
-    letter-spacing: 1px;
-    z-index: 2;
-  }
-  .modal__closed {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    background: none;
-    border: none;
-    outline: none;
-    color: #f2f2f2;
-    font-size: 25px;
-    cursor: pointer;
-  }  
-}
-
-/* Estilos CSS */
-/* ... (código previo) */
-
-.progress-bar {
-  background-color: #3498db;
-  height: 20px;
-  border-radius: 3px;
-  color: white;
-  text-align: center;
-  transition: width 0.5s ease-in-out; /* Transición suave de la anchura */
-}
-
-/* Estilos para la animación */
-.progress-animation {
-  animation: fillProgress 2s forwards; /* Animación para llenar la barra */
-}
-
-@keyframes fillProgress {
-  from {
-    width: 0; /* La animación comienza con una anchura de 0 */
-  }
-  to {
-    /* La animación termina con la anchura deseada */
-    /* En este caso, se usa el valor que se establece en el JavaScript */
-  }
+.buttons {
+  margin-top: 20px;
 }
