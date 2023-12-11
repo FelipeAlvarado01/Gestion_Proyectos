@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@613&family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 
 $Color_1: #2F3D59;
 $Color_2: #BFBAB0;
@@ -21,25 +24,92 @@ $typographyPoppins: 'Poppins', 'Arial Narrow Bold', sans-serif;
 $typographyInter: 'Inter', 'Arial Narrow Bold', sans-serif;
 $typographyRoboto: 'Roboto', 'Arial Narrow Bold', sans-serif;
 $typographyPlayfairDisplay: 'Playfair+Display', 'Arial Narrow Bold', sans-serif;
-
+$typographyNotoSans: 'Noto Sans';
+$typographyNovaSquare: 'Nova Square';
+$typographySignika: 'Signika';
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.slider {
-  //border: 1px solid #ccc;
-  display: flex;
-  justify-content: center; /* Ajusta el espacio entre los elementos */
-  align-content: center;
-  transition: opacity 0.5s ease; /* Transición de opacidad para el slider */
+body{
+  background-color: $Color_1;
+  
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: opacity 0.5s ease; /* Transición de opacidad para el slider */
+
+
+    .content {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      padding: 20px;
+      font-size: 150px;
+      height: 100vh;
+
+      .title-text{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .aco{
+          color: $Color_4;
+          font-family: $typographySignika;
+        }
+        .projects{
+          color: $Color_2;
+          font-family: $typographyNovaSquare;
+        }
+      }
+
+      .slider-text{
+        text-align: center;
+        padding: 20px 0;
+        font-size: 25px;
+        font-family: $typographyPoppins;
+      }
+      
+    }
+  }
+  
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    p{
+      color: $Color_2;
+      padding: 20px 0;
+      font-size: 25px;
+      font-family: $typographyPoppins;
+    }
+
+    .buttoms{
+      margin: 15px 0;
+        button{
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        margin: 0 25px;
+        font-family: $typographyNotoSans;
+        font-size: 20px;
+        padding: 25px;
+        border-radius: 5px;
+        background-color: #151b28;
+        color: $Color_2;
+        //box-shadow:rgb(35, 46, 66) 9px 10px 27px;
+        }
+    }
+  }
+
+
+
 }
 
-.content {
-  padding: 20px;
-}
-
-.buttons {
-  margin-top: 20px;
-}

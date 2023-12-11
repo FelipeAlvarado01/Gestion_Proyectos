@@ -23,13 +23,10 @@ function createTask(){
   `
 }
 
-function close(){
-  console.log("hola");
-  window.location.href = "../index.html";
-}
-
 // Función para agregar una nueva tarea
-function addTask() {
+function addTask(event) {
+  event.preventDefault(); // Evitar que la página se recargue al hacer clic en el botón "Agregar Tarea"
+
   const title = document.getElementById('title').value;
   const collaborators = document.getElementById('collaborators').value;
   const progress = document.getElementById('progress').value;
@@ -65,8 +62,10 @@ function addTask() {
     document.getElementById('title').value = '';
     document.getElementById('collaborators').value = '';
     document.getElementById('progress').value = '';
+    
   } else {
     alert('Por favor, completa todos los campos.');
   }
 }
+
 document.getElementsByClassName('createTask')[0].addEventListener('click', createTask);

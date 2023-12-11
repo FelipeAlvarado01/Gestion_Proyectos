@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*Globales*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@613&family=Nova+Square&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2F3D59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #151b28;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container input[type=submit] {
+  font-family: "Nunito+Sans", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  background-color: #1b2437;
+  color: #fafbfd;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Noto Sans";
+  color: #BFBAB0;
+}
+.container .loginAdmin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .form-sections-styles {
+  margin-bottom: 20px;
+}
+.container .form-sections-styles div {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+}
+.container .form-sections-styles div label {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  color: #D9D6D0;
+}
+.container .form-sections-styles div input {
+  width: 100%;
+  padding: 9px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #50555d;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.container .div-submit {
+  text-align: center;
+}
+.container .submitRegistrar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2F3D59;
+  /* Color del botón */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.container .submitRegistrar:hover {
+  background-color: #35455e;
+  /* Cambio de color al pasar el mouse */
+}
+.container .count-exist-styles {
+  width: 100%;
+  font-family: "Merriweather", sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  color: #D9D6D0;
+}
+.container .iniciar-sesion-styles a {
+  padding: 0px 8px;
+  text-decoration: none;
+  color: #BF843B;
+}
+.container .iniciar-sesion-styles a:link {
+  color: red;
+}/*# sourceMappingURL=stylesLoginAdmin.css.map */

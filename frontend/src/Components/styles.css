@@ -5,23 +5,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@613&family=Nova+Square&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.slider {
+body {
+  background-color: #2F3D59;
+}
+body .slider {
   display: flex;
-  justify-content: center; /* Ajusta el espacio entre los elementos */
+  justify-content: center;
   align-content: center;
   transition: opacity 0.5s ease; /* Transición de opacidad para el slider */
 }
-
-.content {
+body .slider .content {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   padding: 20px;
+  font-size: 150px;
+  height: 100vh;
 }
-
-.buttons {
-  margin-top: 20px;
+body .slider .content .title-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .slider .content .title-text .aco {
+  color: #BF843B;
+  font-family: "Signika";
+}
+body .slider .content .title-text .projects {
+  color: #BFBAB0;
+  font-family: "Nova Square";
+}
+body .slider .content .slider-text {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 25px;
+  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
+}
+body .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+body .login p {
+  color: #BFBAB0;
+  padding: 20px 0;
+  font-size: 25px;
+  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
+}
+body .login .buttoms {
+  margin: 15px 0;
+}
+body .login .buttoms button {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  margin: 0 25px;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #151b28;
+  color: #BFBAB0;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,140 @@
+/*Globales*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@613&family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+$Color_1: #2F3D59;
+$Color_2: #BFBAB0;
+$Color_3: #D9D6D0;
+$Color_4: #BF843B;
+$Color_5: #594A3E;
+$darkColor: #000000;
+$whiteColor: #ffffff;
+$grayColor: #48494b;
+$blackMenu: #282929;
+$greeColor: #1faca2;
+$yellowColor: #ebd96b;
+$redColor: #db4444;
+$typographyPoppins: 'Poppins', 'Arial Narrow Bold', sans-serif;
+$typographyInter: 'Inter', 'Arial Narrow Bold', sans-serif;
+$typographyRoboto: 'Roboto', 'Arial Narrow Bold', sans-serif;
+$typographyPlayfairDisplay: 'Playfair+Display', 'Arial Narrow Bold', sans-serif;
+$typographyNotoSans: 'Noto Sans';
+$typographyNovaSquare: 'Nova Square';
+$typographySignika: 'Signika';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: $Color_1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #151b28;
+  padding: 50px; 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      
+  input[type=submit]{
+    font-family: 'Nunito+Sans', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    background-color: #1b2437;
+    color: #fafbfd;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  h2{
+    display: flex;
+    justify-content: center;
+    font-family: $typographyNotoSans;
+    color: $Color_2;;
+  }
+
+  .loginAdmin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-sections-styles {
+    margin-bottom: 20px;
+  }
+
+  .form-sections-styles div {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    
+    label{
+      font-family: $typographyNotoSans;
+      font-size: 20px;
+      color: $Color_3;
+    }
+    input {
+      width: 100%;
+      padding: 9px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #50555d;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 18px;
+    }
+
+  }
+  .div-submit {
+    text-align: center;
+  }
+
+  .submitRegistrar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2F3D59;
+    /* Color del botón */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .submitRegistrar:hover {
+    background-color: #35455e;
+    /* Cambio de color al pasar el mouse */
+  }
+
+  .count-exist-styles{
+    width: 100%;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    color: $Color_3;
+  }
+  .iniciar-sesion-styles a{
+    padding: 0px 8px;
+    text-decoration: none;
+    color: $Color_4;
+  }
+  .iniciar-sesion-styles a:link {
+    color: red;
+  }
+}
