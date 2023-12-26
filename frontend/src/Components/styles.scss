@@ -27,20 +27,22 @@ $typographyPlayfairDisplay: 'Playfair+Display', 'Arial Narrow Bold', sans-serif;
 $typographyNotoSans: 'Noto Sans';
 $typographyNovaSquare: 'Nova Square';
 $typographySignika: 'Signika';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: $Color_1;
-  
+
   .slider {
     display: flex;
     justify-content: center;
     align-content: center;
-    transition: opacity 0.5s ease; /* Transición de opacidad para el slider */
+    transition: opacity 0.5s ease;
+    /* Transición de opacidad para el slider */
 
 
     .content {
@@ -53,30 +55,32 @@ body{
       font-size: 150px;
       height: 100vh;
 
-      .title-text{
+      .title-text {
         display: flex;
         flex-direction: row;
         align-items: center;
-        .aco{
+        font-family: $typographySignika;
+
+        .aco {
           color: $Color_4;
-          font-family: $typographySignika;
         }
-        .projects{
+
+        .projects {
           color: $Color_2;
           font-family: $typographyNovaSquare;
         }
       }
 
-      .slider-text{
+      .slider-text {
         text-align: center;
         padding: 20px 0;
         font-size: 25px;
         font-family: $typographyPoppins;
       }
-      
+
     }
   }
-  
+
   .login {
     display: flex;
     justify-content: center;
@@ -84,16 +88,17 @@ body{
     flex-direction: column;
     height: 100vh;
 
-    p{
+    p {
       color: $Color_2;
       padding: 20px 0;
       font-size: 25px;
       font-family: $typographyPoppins;
     }
 
-    .buttoms{
+    .buttoms {
       margin: 15px 0;
-        button{
+
+      button {
         cursor: pointer;
         border: none;
         text-decoration: none;
@@ -105,11 +110,111 @@ body{
         background-color: #151b28;
         color: $Color_2;
         //box-shadow:rgb(35, 46, 66) 9px 10px 27px;
-        }
+      }
     }
   }
 
 
+  .container {
+    background-color: #151b28;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
+
+    input[type=submit] {
+      font-family: 'Nunito+Sans', sans-serif;
+      font-size: 20px;
+      width: 100%;
+      background-color: #1b2437;
+      color: #fafbfd;
+      padding: 14px 25px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    h2 {
+      display: flex;
+      padding: 0 0 20px 0;
+      justify-content: center;
+      font-family: $typographyNotoSans;
+      color: $Color_2;
+    }
+
+    .loginAdmin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-sections-styles {
+      margin-bottom: 20px;
+    }
+
+    .form-sections-styles div {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: baseline;
+      flex-direction: column;
+
+      label {
+        font-family: $typographyNotoSans;
+        font-size: 20px;
+        color: $Color_3;
+      }
+
+      input {
+        width: 100%;
+        padding: 9px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #50555d;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
+    }
+
+    .div-submit {
+      text-align: center;
+    }
+
+    .submitRegistrar {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2F3D59;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submitRegistrar:hover {
+      background-color: #35455e;
+    }
+
+    .count-exist-styles {
+      width: 100%;
+      font-family: 'Merriweather', sans-serif;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      padding: 10px;
+      color: $Color_3;
+    }
+
+    .iniciar-sesion-styles a {
+      padding: 0px 8px;
+      text-decoration: none;
+      color: $Color_4;
+    }
+
+    .iniciar-sesion-styles a:link {
+      color: red;
+    }
+  }
 }
-

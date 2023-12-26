@@ -16,23 +16,48 @@
     <div class="content">
       <!-- Contenido del slide -->
       <div class="title-text">
-        <p class="aco">ACO</p><p class="projects">Proyectos</p>
+        <p class="aco">ACO</p>
+        <p class="projects">Proyectos</p>
       </div>
       <p class="slider-text">Por favor, deslice hacia arriba para iniciar</p>
     </div>
   </div>
 
   <div class="login">
-    <div>
+    <!--<div>
       <p>¿Qué tipo de usuario eres?</p>
     </div>
 
     <div class="buttoms" id="buttoms">
       <a href="./loginAdmin.html"><button id="adminButton">Usuario Administrador</button></a>
       <a href="./loginColaborador.html"><button id="colabButton">Usuario Colaborador</button></a>
-    </div>
+    </div>-->
+
+    <form class="loginAdmin">
+      <div class="container">
+        <h2>Inicia Sesión</h2>
+        <div class="form-sections-styles">
+          <div>
+            <label for="">Ingresa tu Correo</label>
+            <input type="text" id="contacto" placeholder="Tu Correo..." required>
+          </div>
+
+          <div>
+            <label for="">Ingresa tu Contraseña</label>
+            <input type="password" id="password" placeholder="Tu Contraseña..." required>
+          </div>
+        </div>
+
+        <div class="div-submit">
+          <input class="submitRegistrar" type="submit" value="Iniciar Sesión">
+        </div>
+
+      </div>
+    </form>
   </div>
-  
+
+
+
   <script src="./js/scriptHome.js"></script>
 </body>
 

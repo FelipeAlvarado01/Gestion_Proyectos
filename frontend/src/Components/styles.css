@@ -21,7 +21,8 @@ body .slider {
   display: flex;
   justify-content: center;
   align-content: center;
-  transition: opacity 0.5s ease; /* Transición de opacidad para el slider */
+  transition: opacity 0.5s ease;
+  /* Transición de opacidad para el slider */
 }
 body .slider .content {
   cursor: pointer;
@@ -37,10 +38,10 @@ body .slider .content .title-text {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-family: "Signika";
 }
 body .slider .content .title-text .aco {
   color: #BF843B;
-  font-family: "Signika";
 }
 body .slider .content .title-text .projects {
   color: #BFBAB0;
@@ -79,4 +80,91 @@ body .login .buttoms button {
   border-radius: 5px;
   background-color: #151b28;
   color: #BFBAB0;
+}
+body .container {
+  background-color: #151b28;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body .container input[type=submit] {
+  font-family: "Nunito+Sans", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  background-color: #1b2437;
+  color: #fafbfd;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body .container h2 {
+  display: flex;
+  padding: 0 0 20px 0;
+  justify-content: center;
+  font-family: "Noto Sans";
+  color: #BFBAB0;
+}
+body .container .loginAdmin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .form-sections-styles {
+  margin-bottom: 20px;
+}
+body .container .form-sections-styles div {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+}
+body .container .form-sections-styles div label {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  color: #D9D6D0;
+}
+body .container .form-sections-styles div input {
+  width: 100%;
+  padding: 9px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #50555d;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+body .container .div-submit {
+  text-align: center;
+}
+body .container .submitRegistrar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2F3D59;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+body .container .submitRegistrar:hover {
+  background-color: #35455e;
+}
+body .container .count-exist-styles {
+  width: 100%;
+  font-family: "Merriweather", sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  color: #D9D6D0;
+}
+body .container .iniciar-sesion-styles a {
+  padding: 0px 8px;
+  text-decoration: none;
+  color: #BF843B;
+}
+body .container .iniciar-sesion-styles a:link {
+  color: red;
 }/*# sourceMappingURL=styles.css.map */

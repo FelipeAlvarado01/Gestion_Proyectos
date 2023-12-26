@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@613&family=Nova+Square&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,22 +14,33 @@
 }
 
 header {
-  background-color: #D9D6D0;
+  background-color: #2F3D59;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Ajusta el espacio entre los elementos */
-  align-items: center; /* Centra verticalmente los elementos */
-}
-header .main-title {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+header .content {
   cursor: pointer;
-  text-decoration: none;
-  margin: 20px 20px 20px 75px;
-  padding: 20px 20px 20px 20px;
-  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
-  font-size: 1em;
-  color: #2F3D59;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 90px;
+  font-size: 2.5em;
+}
+header .content .title-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .content .title-text .aco {
+  color: #BF843B;
+  font-family: "Signika";
+}
+header .content .title-text .projects {
+  color: #D9D6D0;
+  font-family: "Nova Square";
 }
 header .link-section {
   font-size: 1.1em;
@@ -36,13 +49,23 @@ header .link-section {
 header .link-section nav a {
   padding: 0 50px;
   text-decoration: none;
-  color: #2F3D59;
+  color: #D9D6D0;
 }
 header .profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
   margin: 20px 90px;
   padding: 10px 15px;
-  background-color: #BFBAB0;
+  background-color: #D9D6D0;
   border-radius: 10px;
+}
+header .profile p {
+  color: #2F3D59;
+  font-size: 1.5em;
+  font-family: "Nova Square";
+  padding: 0 20px 0 5px;
 }
 header .profile a {
   cursor: pointer;
@@ -58,9 +81,9 @@ main .container h2 {
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
-  font-size: 1.5em;
-  color: #48494b;
+  font-family: "Nova Square";
+  font-size: 2em;
+  color: #2F3D59;
 }
 main button {
   border: none;
@@ -108,28 +131,143 @@ main button {
   cursor: pointer;
 }
 
-/* Estilos CSS */
-/* ... (código previo) */
+.typeOfProjects-section .typeOfProjects-title {
+  padding: 0 0 25px 0;
+  color: #2F3D59;
+  font-family: "Nova Square";
+  font-size: 2em;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section {
+  display: flex;
+  flex-direction: row;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .goToMarket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #c93636;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .goToMarket a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .goToMarket a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .nuevasTecnologias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #BF843B;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .nuevasTecnologias a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .nuevasTecnologias a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .actualizacionDelCore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #594A3E;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .actualizacionDelCore a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .actualizacionDelCore a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .secondTypeOfProjects-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .bigData {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #1faca2;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .bigData a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .bigData a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .secondTypeOfProjects-section .internosTI {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #1d73c3;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .internosTI a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .internosTI a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+
 .progress-bar {
   background-color: #3498db;
   height: 20px;
   border-radius: 3px;
   color: white;
   text-align: center;
-  transition: width 0.5s ease-in-out; /* Transición suave de la anchura */
+  transition: width 0.5s ease-in-out;
+  /* Transición suave de la anchura */
 }
 
-/* Estilos para la animación */
 .progress-animation {
-  animation: fillProgress 2s forwards; /* Animación para llenar la barra */
-}
-
-@keyframes fillProgress {
-  from {
-    width: 0; /* La animación comienza con una anchura de 0 */
-  }
-  to {
-    /* La animación termina con la anchura deseada */
-    /* En este caso, se usa el valor que se establece en el JavaScript */
-  }
+  animation: fillProgress 2s forwards;
+  /* Animación para llenar la barra */
 }/*# sourceMappingURL=adminStyles.css.map */
