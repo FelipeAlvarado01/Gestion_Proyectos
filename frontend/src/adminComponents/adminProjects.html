@@ -19,23 +19,54 @@
         <p class="projects">Proyectos</p>
       </div>
     </div>
-  </a>
-
-  <div class="link-section">
-    <nav>
-      <a href="adminTypeOfProjects.html">Home</a></li>
-      <a href="adminProjects.html">Mis Proyectos</a></li>
-    </nav>
-  </div>
-
-  <div class="profile">
-    <p>Username</p>
-    <a href="#">
-      <i class="fas fa-user fa-2x" style="color: #2F3D59;"></i>
     </a>
-  </div>
-</header>
 
+    <div class="link-section">
+      <nav>
+        <a href="adminTypeOfProjects.html">Home</a></li>
+        <a href="adminProjects.html">Mis Proyectos</a></li>
+      </nav>
+    </div>
+
+    <div class="profile">
+      <p>Username</p>
+      <a href="#">
+        <i class="fas fa-user fa-2x" style="color: #2F3D59;"></i>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <h2>Mis Projectos</h2>
+      <br><br>
+      <div class="filter">
+        <form action="#">
+          <label for="lang">Año</label>
+          <select name="lenguajes" id="lang">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2023</option>
+          </select>
+          <input type="submit" value="Filtrar" />
+        </form>
+      </div>
+      <div class="task-list" id="taskList">
+        <!-- Aquí se agregarán las tarjetas de tarea -->
+      </div>
+
+      <br><br>
+    </div>
+
+    <button id="createTask" class="createTask"><i class="fa-solid fa-plus fa-2x"
+        style="color: #D9D6D0;"></i></button>
+  </main>
+
+  <div class="task-form" id="task-form"></div>
+
+  <script src="./js/addProjectsScript.js"></script>
 </body>
 
 </html>

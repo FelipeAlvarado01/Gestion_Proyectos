@@ -7,12 +7,11 @@ function createTask(event){
         <button onclick="closeModal()">x</button>
           <form id="addTaskForm">
             <h2>Agregar Tarea</h2>
-            <input type="text" id="title" placeholder="Título de la tarea">
-            <input type="text" id="collaborators" placeholder="Colaboradores">
+            <input type="text" id="title" placeholder="Título del proyecto">
+            <input type="date" id="date" placeholder="Fecha Límite">
             <input type="number" id="progress" placeholder="Progreso (%)" min="0" max="100">
             <button onclick="addTask()">Agregar Tarea</button>
           </form>
-          
       </div>  
     </div>
   `
