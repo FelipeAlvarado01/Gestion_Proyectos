@@ -2,7 +2,7 @@ function createTask(event){
   const alert = document.getElementById('task-form');
   alert.innerHTML += 
   `
-    <div class="modal_container">
+    <div class="modal_container" action="../../../../backend/BD/conection.php" method="post">
       <div class="modal__conten">
         <button onclick="closeModal()">x</button>
           <form id="addTaskForm">

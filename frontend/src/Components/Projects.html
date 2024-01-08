@@ -4,21 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/adminStyles.css">
+  <link rel="stylesheet" href="styles/stylesProjects.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://kit.fontawesome.com/b2a572fab6.js" crossorigin="anonymous"></script>
-  <title>ACOProyectos</title>
+  <title>My Projects</title>
 </head>
 
 <body>
 
   <header>
-      <div class="content">
-        <div class="title-text">
-          <p class="aco">ACO</p>
-          <p class="projects">Proyectos</p>
-        </div>
+    <div class="content">
+      <div class="title-text">
+        <p class="aco">ACO</p>
+        <p class="projects">Proyectos</p>
       </div>
+    </div>
     </a>
 
     <div class="link-section">
@@ -39,22 +39,31 @@
   <main>
     <div class="container">
 
-      <h2>Tareas Del Projecto</h2>
+      <h2>Mis Projectos</h2>
       <br><br>
+      <div class="filter">
+        <form action="#">
+          <label for="lang">Año</label>
+          <select name="lenguajes" id="lang">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2023</option>
+          </select>
+          <input type="submit" value="Filtrar" />
+        </form>
+      </div>
       <div class="task-list" id="taskList">
         <!-- Aquí se agregarán las tarjetas de tarea -->
       </div>
 
       <br><br>
     </div>
-
-    <button id="createTask" class="createTask"><i class="fa-solid fa-plus fa-2x" style="color: #D9D6D0;"></i></button>
   </main>
 
   <div class="task-form" id="task-form"></div>
 
-  <script src="./js/script.js"></script>
-
+  <script src="./js/addProjectsScript.js"></script>
 </body>
 
 </html>

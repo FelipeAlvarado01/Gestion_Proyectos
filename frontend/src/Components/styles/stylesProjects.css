@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/*Globales*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@613&family=Nova+Square&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #2F3D59;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .content {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 90px;
+  font-size: 2.5em;
+}
+header .content .title-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .content .title-text .aco {
+  color: #BF843B;
+  font-family: "Signika";
+}
+header .content .title-text .projects {
+  color: #D9D6D0;
+  font-family: "Nova Square";
+}
+header .link-section {
+  font-size: 1.1em;
+  font-family: "Poppins", "Arial Narrow Bold", sans-serif;
+}
+header .link-section nav a {
+  padding: 0 50px;
+  text-decoration: none;
+  color: #D9D6D0;
+}
+header .profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 90px;
+  padding: 10px 15px;
+  background-color: #D9D6D0;
+  border-radius: 10px;
+}
+header .profile p {
+  color: #2F3D59;
+  font-size: 1.5em;
+  font-family: "Nova Square";
+  padding: 0 20px 0 5px;
+}
+header .profile a {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+main {
+  margin: 20px 90px;
+}
+main .container h2 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Nova Square";
+  font-size: 2em;
+  color: #2F3D59;
+}
+main button {
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #2F3D59;
+}
+
+.task-form .modal_container {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.task-form .modal__conten {
+  width: 350px;
+  max-width: 500px;
+  height: 250px;
+  padding: 5px 15px 25px 15px;
+  position: absolute;
+  border-radius: 10px;
+  color: #fafbfd;
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+  background-color: #2F3D59;
+  display: block;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+.task-form .modal__closed {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.typeOfProjects-section .typeOfProjects-title {
+  padding: 0 0 25px 0;
+  color: #2F3D59;
+  font-family: "Nova Square";
+  font-size: 2em;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section {
+  display: flex;
+  flex-direction: row;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .goToMarket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #c93636;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .goToMarket a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .goToMarket a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .nuevasTecnologias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #BF843B;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .nuevasTecnologias a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .nuevasTecnologias a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .actualizacionDelCore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #594A3E;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .actualizacionDelCore a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .firtsTypeOfProjects-section .actualizacionDelCore a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .secondTypeOfProjects-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .bigData {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #1faca2;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .bigData a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .bigData a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+.typeOfProjects-section .secondTypeOfProjects-section .internosTI {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #1d73c3;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 20px;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .internosTI a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.typeOfProjects-section .secondTypeOfProjects-section .internosTI a .goToMarket-title p {
+  padding: 0 20px 0 0;
+  font-size: 3em;
+  color: #D9D6D0;
+  font-family: "Signika";
+}
+
+.progress-bar {
+  background-color: #3498db;
+  height: 20px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  transition: width 0.5s ease-in-out;
+  /* Transición suave de la anchura */
+}
+
+.progress-animation {
+  animation: fillProgress 2s forwards;
+  /* Animación para llenar la barra */
+}/*# sourceMappingURL=stylesProjects.css.map */

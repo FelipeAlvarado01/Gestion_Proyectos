@@ -1,0 +1,332 @@
+/*Globales*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@613&family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+$Color_1: #2F3D59;
+$Color_2: #BFBAB0;
+$Color_3: #D9D6D0;
+$Color_4: #BF843B;
+$Color_5: #594A3E;
+$darkColor: #000000;
+$blueColor: #1d73c3;
+$grayColor: #48494b;
+$blackMenu: #282929;
+$greeColor: #1faca2;
+$yellowColor: #ebd96b;
+$redColor: #c93636;
+$typographyPoppins: 'Poppins', 'Arial Narrow Bold', sans-serif;
+$typographyInter: 'Inter', 'Arial Narrow Bold', sans-serif;
+$typographyRoboto: 'Roboto', 'Arial Narrow Bold', sans-serif;
+$typographyPlayfairDisplay: 'Playfair+Display', 'Arial Narrow Bold', sans-serif;
+$typographyNovaSquare: 'Nova Square';
+$typographySignika: 'Signika';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: $Color_1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .content {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 20px 90px;
+    font-size: 2.5em;
+
+    .title-text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .aco {
+        color: $Color_4;
+        font-family: $typographySignika;
+      }
+
+      .projects {
+        color: $Color_3;
+        font-family: $typographyNovaSquare;
+      }
+    }
+  }
+
+  .link-section {
+    font-size: 1.1em;
+
+    font-family: $typographyPoppins;
+
+    nav {
+      a {
+        padding: 0 50px;
+        text-decoration: none;
+        color: $Color_3;
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 20px 90px;
+    padding: 10px 15px;
+    background-color: $Color_3;
+    border-radius: 10px;
+
+    p {
+      color: $Color_1;
+      font-size: 1.5em;
+      font-family: $typographyNovaSquare;
+      padding: 0 20px 0 5px;
+    }
+
+    a {
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+    }
+  }
+}
+
+main {
+  margin: 20px 90px;
+
+  .container {
+    h2 {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: $typographyNovaSquare;
+      font-size: 2em;
+      color: $Color_1 ;
+    }
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: $Color_1;
+  }
+
+}
+
+.task-form {
+  .modal_container {
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .modal__conten {
+    width: 350px;
+    max-width: 500px;
+    height: 250px;
+    padding: 5px 15px 25px 15px;
+    position: absolute;
+    border-radius: 10px;
+    color: #fafbfd;
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+    background-color: $Color_1;
+    display: block;
+    letter-spacing: 1px;
+    z-index: 2;
+  }
+
+  .modal__closed {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+.typeOfProjects-section {
+
+  .typeOfProjects-title {
+    padding: 0 0 25px 0;
+    color: $Color_1;
+    font-family: $typographyNovaSquare;
+    font-size: 2em;
+  }
+
+  .firtsTypeOfProjects-section{
+    display: flex;
+    flex-direction: row;
+    .goToMarket {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4%;
+      background-color: $redColor;
+      border-radius: 15px;
+      text-decoration: none;
+      margin: 20px;
+      a {
+        border: none;
+        outline: none;
+        text-decoration: none;
+        .goToMarket-title {
+          p {
+            padding: 0 20px 0 0;
+            font-size: 3em;
+            color: $Color_3;
+            font-family: $typographySignika;
+          }
+        }
+      }
+    }
+    .nuevasTecnologias{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4%;
+      background-color: $Color_4;
+      border-radius: 15px;
+      text-decoration: none;
+      margin: 20px;
+      a {
+        border: none;
+        outline: none;
+        text-decoration: none;
+        .goToMarket-title {
+          p {
+            padding: 0 20px 0 0;
+            font-size: 3em;
+            color: $Color_3;
+            font-family: $typographySignika;
+          }
+        }
+      }
+    }
+
+    .actualizacionDelCore{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4%;
+      background-color: $Color_5;
+      border-radius: 15px;
+      text-decoration: none;
+      margin: 20px;
+      a {
+        border: none;
+        outline: none;
+        text-decoration: none;
+        .goToMarket-title {
+          p {
+            padding: 0 20px 0 0;
+            font-size: 3em;
+            color: $Color_3;
+            font-family: $typographySignika;
+          }
+        }
+      }
+    }
+  }
+
+  .secondTypeOfProjects-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .bigData {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4%;
+      background-color: $greeColor;
+      border-radius: 15px;
+      text-decoration: none;
+      margin: 20px;
+
+      a {
+        border: none;
+        outline: none;
+        text-decoration: none;
+        .goToMarket-title {
+          p {
+            padding: 0 20px 0 0;
+            font-size: 3em;
+            color: $Color_3;
+            font-family: $typographySignika;
+          }
+        }
+      }
+    }
+
+    .internosTI {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4%;
+      background-color: $blueColor;
+      border-radius: 15px;
+      text-decoration: none;
+      margin: 20px;
+
+      a {
+        border: none;
+        outline: none;
+        text-decoration: none;
+        .goToMarket-title {
+          p {
+            padding: 0 20px 0 0;
+            font-size: 3em;
+            color: $Color_3;
+            font-family: $typographySignika;
+          }
+        }
+      }
+    }
+  }
+}
+
+.progress-bar {
+  background-color: #3498db;
+  height: 20px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  transition: width 0.5s ease-in-out;
+  /* Transición suave de la anchura */
+}
+
+.progress-animation {
+  animation: fillProgress 2s forwards;
+  /* Animación para llenar la barra */
+}
