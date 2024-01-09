@@ -1,17 +1,20 @@
-function createTask(event){
+function createTask(event) {
   const alert = document.getElementById('task-form');
-  alert.innerHTML += 
-  `
+  alert.innerHTML +=
+    `
     <div class="modal_container">
       <div class="modal__conten">
         <button onclick="closeModal()">x</button>
-          <form id="addTaskForm">
-            <h2>Agregar Tarea</h2>
-            <input type="text" id="title" placeholder="Título del proyecto">
-            <input type="date" id="date" placeholder="Fecha Límite">
-            <input type="number" id="progress" placeholder="Progreso (%)" min="0" max="100">
-            <button onclick="addTask()">Agregar Tarea</button>
-          </form>
+        <form id="addTaskForm" action="addProjects.php" method="POST">
+          <h2>Agregar Tarea</h2>
+          <input type="text" id="title" name="nombre_proyecto" placeholder="Título del proyecto">
+          <input type="text" id="age" name="anio" placeholder="Año del creacion">
+          <input type="text" id="clasification" name="clasificacion" placeholder="Clasificacion">
+          <input type="date" id="fecha_inicio" name="fecha_inicio" placeholder="Fecha Límite">
+          <input type="date" id="fecha_final" name="fecha_final" placeholder="Fecha Límite">
+          <input type="number" id="progress" name="progreso" placeholder="Progreso (%)" min="0" max="100">
+          <button>Agregar Tarea</button>
+      </form>
       </div>  
     </div>
   `
@@ -20,10 +23,9 @@ function createTask(event){
 // Función para agregar una nueva tarea
 function addTask() {
   const title = document.getElementById('title').value;
-  const collaborators = document.getElementById('collaborators').value;
   const progress = document.getElementById('progress').value;
 
-  if (title !== '' && collaborators !== '' && progress !== '') {
+  if (title !== '' && progress !== '') {
     const taskList = document.getElementById('taskList');
 
     // Crear una nueva tarjeta de tarea
@@ -38,7 +40,6 @@ function addTask() {
 
     taskCard.innerHTML = `
       <h3>${title}</h3>
-      <p><strong>Colaboradores:</strong> ${collaborators}</p>
       <br><br>
     `;
 
@@ -53,9 +54,8 @@ function addTask() {
 
     // Limpiar los campos del formulario
     document.getElementById('title').value = '';
-    document.getElementById('collaborators').value = '';
     document.getElementById('progress').value = '';
-    
+
     event.preventDefault();
   } else {
     alert('Por favor, completa todos los campos.');
