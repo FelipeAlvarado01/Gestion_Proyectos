@@ -19,7 +19,7 @@ function createTask(event){
 }
 
 // Función para agregar una nueva tarea
-function addTask() {
+/*function addTask() {
   const title = document.getElementById('title').value;
   const collaborators = document.getElementById('collaborators').value;
   const progress = document.getElementById('progress').value;
@@ -61,7 +61,7 @@ function addTask() {
   } else {
     alert('Por favor, completa todos los campos.');
   }
-}
+}*/
 
 document.getElementsByClassName('createTask')[0].addEventListener('click', createTask);
 

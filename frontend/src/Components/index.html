@@ -25,18 +25,18 @@
 
   <div class="login">
 
-    <form class="loginAdmin">
+    <form class="loginAdmin" action="getUsuario.php" method="POST">
       <div class="container">
         <h2>Inicia Sesión</h2>
         <div class="form-sections-styles">
           <div>
             <label for="">Ingresa tu Correo</label>
-            <input type="text" id="contacto" placeholder="Tu Correo..." required>
+            <input type="text" id="email" name="email" placeholder="Tu Correo..." required>
           </div>
 
           <div>
             <label for="">Ingresa tu Contraseña</label>
-            <input type="password" id="password" placeholder="Tu Contraseña..." required>
+            <input type="password" id="password" name="contrasenia" placeholder="Tu Contraseña..." required>
           </div>
         </div>
 

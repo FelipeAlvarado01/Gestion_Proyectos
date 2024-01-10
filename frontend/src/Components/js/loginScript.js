@@ -19,12 +19,3 @@ function createTask(event) {
     </div>
   `
 }
-
-document.getElementsByClassName('createTask')[0].addEventListener('click', createTask);
-
-function closeModal() {
-  const modal = document.querySelector('.modal_container');
-  if (modal) {
-    modal.remove();
-  }
-}

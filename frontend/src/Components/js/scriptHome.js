@@ -38,17 +38,3 @@ slider.addEventListener('mousemove', function(e) {
     }
   }
 });
-
-// Lógica para los botones
-const adminButton = document.getElementById('adminButton');
-const colabButton = document.getElementById('colabButton');
-
-adminButton.addEventListener('click', function() {
-  // Acciones para el usuario administrador
-  console.log('Acciones para usuario administrador');
-});
-
-colabButton.addEventListener('click', function() {
-  // Acciones para el usuario colaborador
-  console.log('Acciones para usuario colaborador');
-});
