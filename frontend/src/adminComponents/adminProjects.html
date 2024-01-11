@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <script src="./js/getProjectScript.js"></script>
   <header>
     <div class="content">
       <div class="title-text">
@@ -55,6 +55,20 @@
       </div>
       <div class="task-list" id="taskList">
         <!-- Aquí se agregarán las tarjetas de tarea -->
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre Proyecto</th>
+              <th>Año</th>
+              <th>Clasificación</th>
+              <th>Fecha de inicio</th>
+              <th>Fecha Final</th>
+              <th>Progreso</th>
+            </tr>
+          </thead>
+          <tbody id="table_data"></tbody>
+        </table>
       </div>
 
       <br><br>
