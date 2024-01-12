@@ -2,15 +2,13 @@
 include("connection.php");
 
 // Recibir datos del formulario
-$nombre_proyecto = $_POST['nombre_proyecto'];
-$anio = $_POST['anio'];
-$clasificacion = $_POST['clasificacion'];
-$fecha_inicio = $_POST['fecha_inicio'];
-$fecha_final = $_POST['fecha_final'];
+$nombre_tarea = $_POST['nombre_tarea'];
+$colaboradores = $_POST['colaboradores'];
 $progreso = $_POST['progreso'];
+$anexos = $_POST['anexos'];
 
 // Insertar datos en la base de datos
-$sql = "INSERT INTO proyectos (nombre_proyecto, anio, clasificacion,fecha_inicio, fecha_final, progreso) VALUES ('$nombre_proyecto', '$anio', '$clasificacion','$fecha_inicio','$fecha_final', '$progreso')";
+$sql = "INSERT INTO tareas (nombre_tarea, colaboradores, progreso, anexos) VALUES ('$nombre_tarea', '$colaboradores', '$progreso', '$anexos')";
 
 if ($conn->query($sql) === TRUE) {
     // Mostrar mensaje de alerta en el navegador
