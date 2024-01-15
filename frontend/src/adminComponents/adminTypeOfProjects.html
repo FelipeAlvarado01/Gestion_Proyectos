@@ -11,7 +11,8 @@
 </head>
 
 <body>
-
+  <script src="./js/usernameScript.js"></script>
+  <script src="./js/usuarioIDscript.js"></script>
   <header>
     <div class="content">
       <div class="title-text">
@@ -29,7 +30,7 @@
     </div>
 
     <div class="profile">
-      <p>Username</p>
+      <p id="username">Username</p>
       <a href="#">
         <i class="fas fa-user fa-2x" style="color: #2F3D59;"></i>
       </a>
@@ -39,20 +40,21 @@
   <main class="typeOfProjects-section">
     <h2 class="typeOfProjects-title">Tipos De Proyectos</h2>
 
-    <div class="firtsTypeOfProjects-section"> 
+    <div class="firtsTypeOfProjects-section">
       <section class="goToMarket">
-        <a href="adminProjects.html">
-          <div class="goToMarket-title">
-            <p>Go</p>
-            <p>To</p>
-            <p>Market</p>
-          </div>
+        <a href="adminProjects.html?clasificacion=goToMarket">
+            <div class="goToMarket-title">
+                <p>Go</p>
+                <p>To</p>
+                <p>Market</p>
+            </div>
         </a>
         <i class="fa-solid fa-store fa-10x" style="color: #D9D6D0;"></i>
-      </section>
-  
+    </section>
+    
+
       <section class="nuevasTecnologias">
-        <a href="adminProjects.html">
+        <a href="adminProjects.html?clasificacion=nuevasTecnologias">
           <div class="goToMarket-title">
             <p>Nuevas</p>
             <p>Tecnologías</p>
@@ -60,9 +62,9 @@
         </a>
         <i class="fa-solid fa-satellite fa-10x" style="color: #D9D6D0;"></i>
       </section>
-  
+
       <section class="actualizacionDelCore">
-        <a href="adminProjects.html">
+        <a href="adminProjects.html?clasificacion=actualizacionDelCore">
           <div class="goToMarket-title">
             <p>Actualización</p>
             <p>Del</p>
@@ -73,9 +75,9 @@
       </section>
     </div>
 
-    <div class="secondTypeOfProjects-section"> 
+    <div class="secondTypeOfProjects-section">
       <section class="bigData">
-        <a href="adminProjects.html">
+        <a href="adminProjects.html?clasificacion=bigData">
           <div class="goToMarket-title">
             <p>Big</p>
             <p>Data Y</p>
@@ -84,9 +86,9 @@
         </a>
         <i class="fa-solid fa-database fa-10x" style="color: #D9D6D0;"></i>
       </section>
-  
+
       <section class="internosTI">
-        <a href="adminProjects.html">
+        <a href="adminProjects.html?clasificacion=internosTI">
           <div class="goToMarket-title">
             <p>Internos</p>
             <p>TI</p>
@@ -94,11 +96,11 @@
         </a>
         <i class="fa-solid fa-house-laptop fa-10x" style="color: #D9D6D0;"></i>
       </section>
-  
+
     </div>
 
-
   </main>
+
 
 </body>
 

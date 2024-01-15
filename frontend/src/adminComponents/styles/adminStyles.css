@@ -94,7 +94,7 @@ main button {
 }
 
 .task-form .modal_container {
-  background-color: transparent;
+  background-color: #2F3D59;
   width: 100vw;
   height: 100vh;
   display: flex;

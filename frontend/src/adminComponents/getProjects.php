@@ -1,31 +1,28 @@
 <?php
 include("connection.php");
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Obtener usuarioID y clasificacion de la URL
+$usuarioID = $_GET['usuarioID'];
+$clasificacion = $_GET['clasificacion'];
 
-$sql = 'SELECT * FROM proyectos';
-$result = $conn->query($sql);
 
-$data = [];
+// Modificar la consulta SQL para obtener proyectos filtrados
+$sql = "SELECT * FROM proyectos WHERE usuarioID = $usuarioID AND clasificacion = '$clasificacion'";
+$resultado = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $data[] = [
-            'projectID' => $row['projectID'],
-            'nombre_proyecto' => $row['nombre_proyecto'],
-            'anio' => $row['anio'],
-            'clasificacion' => $row['clasificacion'],
-            'fecha_inicio' => $row['fecha_inicio'],
-            'fecha_final' => $row['fecha_final'],
-            'progreso' => $row['progreso'],
-        ];
+if ($resultado->num_rows > 0) {
+    // Obtener los proyectos
+    $proyectos = array();
+    while ($fila = $resultado->fetch_assoc()) {
+        $proyectos[] = $fila;
     }
+
+    // Devolver proyectos en formato JSON
+    echo json_encode($proyectos);
+} else {
+    echo json_encode(array('mensaje' => 'No se encontraron proyectos para el usuario y tipo de proyecto especificados.'));
 }
 
+// Cerrar conexión
 $conn->close();
-
-header('Content-Type: application/json');
-echo json_encode($data);
 ?>
