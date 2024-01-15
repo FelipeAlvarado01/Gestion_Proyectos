@@ -15,6 +15,8 @@ $sql = "INSERT INTO proyectos (nombre_proyecto, anio, clasificacion,fecha_inicio
 if ($conn->query($sql) === TRUE) {
     // Mostrar mensaje de alerta en el navegador
     echo '<script>alert("Datos guardados correctamente");</script>';
+    // Recargar la página adminProjects.html
+    echo '<script>window.location.href = "adminProjects.html";</script>';
 } else {
     echo "Error al guardar datos: " . $conn->error;
 }

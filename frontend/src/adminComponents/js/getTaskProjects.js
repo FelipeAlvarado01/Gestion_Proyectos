@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const projectID = urlParams.get("projectID");
-
+    
     if (projectID) {
         // Hacer algo con el projectID, como cargar y mostrar las tareas relacionadas
-        loadTasksForProject(projectID);
+        loadTasksForProject(parseInt(projectID, 10));
     } else {
         console.log("No se proporcionó un projectID en la URL.");
     }
@@ -33,7 +33,6 @@ function loadTasksForProject(projectID) {
 
                 taskListHTML += '</ul>';
 
-                // Mostrar la lista de tareas en algún elemento HTML en tu página
                 document.getElementById('taskListContainer').innerHTML = taskListHTML;
             } else {
                 // No hay tareas asociadas al proyecto

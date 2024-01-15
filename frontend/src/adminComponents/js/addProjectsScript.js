@@ -3,7 +3,7 @@ function createTask(event) {
   alert.innerHTML +=
     `
     <div class="modal_container">
-      <div class="modal__conten">
+      <div class="modal__content">
         <button onclick="closeModal()">x</button>
         <form id="addTaskForm" action="addProjects.php" method="POST">
           <h2>Agregar Tarea</h2>

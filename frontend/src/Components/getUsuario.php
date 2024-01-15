@@ -1,39 +1,30 @@
 <?php
 include("connection.php");
 
-// Obtener correo y contraseña del formulario de inicio de sesión
-$correo = $_POST['email'];
+// Recibir datos del formulario
+$email = $_POST['email'];
 $contrasenia = $_POST['contrasenia'];
 
-// Escapar las variables para prevenir inyección SQL (puedes mejorar la seguridad utilizando consultas preparadas)
-$correo_escapado = $conn->real_escape_string($correo);
-$contrasenia_escapada = $conn->real_escape_string($contrasenia);
+$sql = "SELECT * FROM usuario WHERE email = '$email' AND contrasenia = '$contrasenia'";
+$resultado = $conn->query($sql);
 
-// Consulta SQL para buscar el correo y contraseña en la base de datos
-$sql = "SELECT * FROM usuario WHERE email = '$correo_escapado' AND contrasenia = '$contrasenia_escapada'";
-$result = $conn->query($sql);
+if ($resultado->num_rows > 0) {
+    // Obtener el tipo de usuario de la fila recuperada de la base de datos
+    $fila = $resultado->fetch_assoc();
+    $tipo_usuario = $fila['tipo_usuario'];
 
-if ($result->num_rows == 1) {
-    // Usuario autenticado exitosamente
-    // Redireccionar a la página correspondiente según el rol del usuario
-    $row = $result->fetch_assoc();
-    $rol = $row['rol']; // Supongamos que tienes un campo 'rol' en tu tabla 'usuarios'
-
-    if ($rol === 'administrador') {
-        header("Location: adminProjects.html");
-        exit();
-    } elseif ($rol === 'colaborador') {
-        header("Location: Projects.html");
-        exit();
+    // Los datos son correctos, redirigir a la página correspondiente
+    if ($tipo_usuario == 'administrador') {
+        echo '<script>window.location.href = "../adminComponents/adminTypeOfProjects.html";</script>';
     } else {
-        // Manejar otros roles o situaciones
-        echo "Rol no reconocido o no autorizado";
-        // Puedes redirigir a una página de error o hacer otra cosa aquí
+        echo '<script>window.location.href = "./TypeOfProject.html";</script>';
     }
 } else {
-    // Usuario no encontrado o credenciales incorrectas
-    echo "Credenciales incorrectas. Por favor, inténtalo de nuevo.";
+    //echo "Error: Usuario o contraseña incorrectos.";
+    echo '<script>alert("Error: Usuario o contraseña incorrectos.");</script>';
 }
 
-// Cerrar conexión a la base de datos
+// Cerrar conexión
 $conn->close();
+?>
+

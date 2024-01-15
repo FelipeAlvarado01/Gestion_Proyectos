@@ -33,7 +33,7 @@ slider.addEventListener('mousemove', function(e) {
       slider.style.opacity = '0';
       setTimeout(() => {
         slider.style.display = 'none';
-        buttons.style.display = 'block';
+        //buttons.style.display = 'block';
       }, 500);
     }
   }
