@@ -15,7 +15,8 @@ if ($conn->query($sql) === TRUE) {
     // Mostrar mensaje de alerta en el navegador
     echo '<script>alert("Datos guardados correctamente");</script>';
     // Recargar la página adminProjects.html
-    echo '<script>window.location.href = "adminTask.html";</script>';
+    //echo '<script>window.location.href = "adminTask.html";</script>';
+    echo '<script>window.location.href = "adminTask.html?projectID=' . $projectID . '";</script>';
 } else {
     echo "Error al guardar datos: " . $conn->error;
 }

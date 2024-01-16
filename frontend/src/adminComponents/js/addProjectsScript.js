@@ -1,11 +1,17 @@
 let globalClasificacion;
+let globalUsuarioID;
 
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   globalClasificacion = urlParams.get("clasificacion");
+  const usuarioIDString = sessionStorage.getItem("usuarioID");
+
+  // Convierte el usuarioID a un entero utilizando parseInt
+  globalUsuarioID = parseInt(usuarioIDString, 10);
 });
 
 function createTask(event) {
+  console.log(globalUsuarioID);
   const alert = document.getElementById('task-form');
   alert.innerHTML +=
     `
@@ -15,6 +21,7 @@ function createTask(event) {
         <form id="addTaskForm" action="addProjects.php" method="POST">
           <h2>Agregar Tarea</h2>
           <input type="hidden" name="clasificacion" value="${globalClasificacion}">
+          <input type="hidden" name="usuarioID" value="${globalUsuarioID}">
           <input type="text" id="title" name="nombre_proyecto" placeholder="Título del proyecto">
           <input type="text" id="age" name="anio" placeholder="Año del creacion">
           <input type="date" id="fecha_inicio" name="fecha_inicio" placeholder="Fecha Límite">

@@ -1,35 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Recuperar valores de sessionStorage
-    const usuarioID = sessionStorage.getItem("usuarioID");
-    const username = sessionStorage.getItem("username");
+    const urlParams = new URLSearchParams(window.location.search);
+    const clasificacion = urlParams.get("clasificacion");
 
-    // Usar usuarioID y username según sea necesario
-    console.log("Usuario ID:", usuarioID);
-    console.log("Username:", username);
+    // Almacenar valores en sessionStorage
+    sessionStorage.setItem("clasificacion", clasificacion);
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const projectID = urlParams.get("projectID");
+    const clasificacion = sessionStorage.getItem("clasificacion");
+    const usuarioID = sessionStorage.getItem("usuarioID");
 
-    if (projectID) {
-        // Hacer algo con el projectID, como cargar y mostrar las tareas relacionadas
-        loadTasksForProject(parseInt(projectID, 10));
+    if (clasificacion && usuarioID) {
+        document.getElementById('username').innerText = username;
+        loadProjectforClasification(clasificacion, parseInt(usuarioID, 10));
     } else {
-        console.log("No se proporcionó un projectID en la URL.");
+        console.log("No se proporcionó un usuarioID o clasificacion en la URL.");
     }
 });
 
+function loadProjectforClasification(clasificacion, usuarioID) {
+    fetch(`getProjects.php?clasificacion=${clasificacion}&usuarioID=${usuarioID}`)
+        .then(res => res.json())
+        .then(data => {
 
-fetch('getProjects.php')
-    .then(res => res.json())
-    .then(data => {
-
-        // console.log(data);
-        let str = '';
-        data.map(item => {
-            str += `
+            // console.log(data);
+            let str = '';
+            data.map(item => {
+                str += `
             <tr>
                 <td>${item.projectID}</td>
                 <td>${item.nombre_proyecto}</td>
@@ -40,12 +37,12 @@ fetch('getProjects.php')
                 <td>${item.progreso}</td>
                 <td><a href="#" onclick="redirectToAdminTask(${item.projectID})">Ver Tareas</a></td>
             </tr>
-        `
+        `;
+            });
+
+            document.getElementById('table_data').innerHTML = str;
         });
-
-        document.getElementById('table_data').innerHTML = str;
-    });
-
+}
 
 function redirectToAdminTask(projectID) {
     // Redirigir a adminTask.html con el ID del proyecto
