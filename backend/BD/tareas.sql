@@ -1,15 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 09-01-2024 a las 02:21:57
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.3.31
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -37,6 +25,24 @@ CREATE TABLE `tareas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `tareas`
+--
+
+INSERT INTO `tareas` (`tareasID`, `projectID`, `nombre_tarea`, `colaboradores`, `progreso`, `anexos`) VALUES
+(1, 0, 'Prueba18', 'felipe', 20, 'ninguno'),
+(2, 0, 'Prueba18', 'felipe', 20, 'ninguno'),
+(3, 0, 'Prueba18-2', 'felipe', 0, 'ninguno'),
+(4, 0, 'Prueba18-3', 'Juna', 5, 'ninguno'),
+(5, 0, 'Prueba18-4', 'Alez', 8, 'hola'),
+(6, 0, 'Prueba18-4', 'Alez', 8, 'hola'),
+(7, 0, 'Prueba18', 'felipe', 10, 'hola'),
+(8, 18, 'Prueba18-5', 'jhon', 5, 'fgdfg'),
+(9, 18, 'Prueba18-4', 'felipe', 6, 'hola'),
+(10, 36, 'Prueba36-3', 'felipe', 5, 'ninguno'),
+(11, 36, 'Prueba18-2', 'dasd', 1, 'adsasd'),
+(12, 36, 'Prueba18-3', 'felipe', 8, 'ninguno');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -54,7 +60,7 @@ ALTER TABLE `tareas`
 -- AUTO_INCREMENT de la tabla `tareas`
 --
 ALTER TABLE `tareas`
-  MODIFY `tareasID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `tareasID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,9 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-01-2024 a las 04:38:15
+-- Tiempo de generación: 16-01-2024 a las 05:59:08
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -30,7 +26,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `usuario` (
   `usuarioID` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `correo` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `contrasenia` varchar(50) NOT NULL,
   `tipo_usuario` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -39,7 +35,7 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`usuarioID`, `nombre`, `correo`, `contrasenia`, `tipo_usuario`) VALUES
+INSERT INTO `usuario` (`usuarioID`, `nombre`, `email`, `contrasenia`, `tipo_usuario`) VALUES
 (1, 'felipe', 'afalvarado@alimentosalconsumidor.com', '123', 'administrador'),
 (2, 'joaquin', 'colab@alimentosalconsumidor.com', '321', 'colaborador');
 
