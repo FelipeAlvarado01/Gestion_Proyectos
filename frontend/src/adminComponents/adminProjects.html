@@ -43,15 +43,16 @@
       <h2>Mis Projectos</h2>
       <br><br>
       <div class="filter">
-        <form action="#">
+        <form id="filterForm">
           <label for="lang">Año</label>
-          <select name="lenguajes" id="lang">
+          <select name="anio" id="selectAnio">
             <option value="2021">2021</option>
             <option value="2022">2022</option>
             <option value="2023">2023</option>
-            <option value="2024">2023</option>
+            <option value="2024">2024</option>
           </select>
-          <input type="submit" value="Filtrar" />
+          <!--<input type="submit" value="Filtrar" />-->
+          <button onclick="filterFuntion()">Filtrar</button>
         </form>
       </div>
       <div class="task-list" id="taskList">
